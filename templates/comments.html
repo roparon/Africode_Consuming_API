@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Comments{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Comments</h2>
+    <ul class="list-group">
+        {% for comment in comments %}
+        <li class="list-group-item">
+            <strong>{{ comment.name }}</strong>: {{ comment.body }}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

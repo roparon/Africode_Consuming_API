@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Albums{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Albums</h2>
+    <div class="list-group">
+        {% for album in albums %}
+        <a href="#" class="list-group-item list-group-item-action">
+            <h5 class="mb-1">{{ album.title }}</h5>
+            <small>Album ID: {{ album.id }}</small>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
